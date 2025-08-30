@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Most Annoying People</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        background: #fdf0f0; /* warna background */
+        font-family: "Poppins", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 130vh; /* tinggi cukup untuk scroll dikit */
+        padding: 40px 20px;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.6s ease forwards;
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .container {
+        position: relative;
+        max-width: 900px;
+        margin-top: 20px;
+      }
+
+      /* Teks besar jadi background */
+      .big-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 8vw;
+        font-weight: 700;
+        color: #96c29e; /* hijau soft */
+        line-height: 1.1;
+        opacity: 0.2;
+        word-break: break-word;
+        z-index: -1; /* taruh di belakang ucapan */
+        text-align: center;
+      }
+
+      /* Teks kecil dengan kotak */
+      .quote {
+        position: absolute;
+        background: #ffb3ab; /* pink pastel */
+        color: white;
+        padding: 10px 15px;
+        border-radius: 8px;
+        font-size: 14px;
+        max-width: 250px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Posisi tiap quote */
+      .q1 {
+        top: 7%;
+        left: 20%;
+      }
+      .q2 {
+        top: 20%;
+        right: 15%;
+      }
+      .q3 {
+        top: 35%;
+        left: 10%;
+      }
+      .q4 {
+        top: 44%;
+        right: 10%;
+      }
+      .q5 {
+        top: 55%;
+        left: 25%;
+      }
+      .q6 {
+        bottom: 25%;
+        right: 10%;
+      }
+      .q7 {
+        bottom: 10%;
+        left: 20%;
+      }
+
+      /* Scroll hint */
+      .scroll-hint {
+        margin-top: 20px;
+        font-size: 16px;
+        color: #96c29e;
+        font-weight: 500;
+        animation: bounce 1.5s infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(5px);
+        }
+      }
+
+      /* Tombol redirect */
+      .btn-container {
+        margin-top: 60px;
+        text-align: center;
+      }
+
+      .btn {
+        background-color: #ffb3ab;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 30px;
+        font-size: 16px;
+        color: white;
+        cursor: pointer;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        text-decoration: none; /* biar gak underline */
+        display: inline-block;
+      }
+
+      .btn:hover {
+        background-color: #ff9a93;
+      }
+
+      /* 📱 Responsif untuk HP */
+      @media (max-width: 768px) {
+        body {
+          padding: 20px 10px;
+          min-height: auto;
+        }
+
+        .big-text {
+          font-size: 12vw; /* teks gede jadi lebih kecil */
+          text-align: center;
+        }
+
+        .quote {
+          position: static; /* biar ga numpuk */
+          display: block;
+          margin: 12px auto;
+          max-width: 90%;
+          font-size: 13px;
+          text-align: center;
+        }
+
+        .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .btn-container {
+          margin-top: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Quotes -->
+      <div class="quote q1">
+        happy 19th birthday orang nyebelin sejagat raya
+      </div>
+      <div class="quote q2">semoga ga sering ngambekan lagi</div>
+      <div class="quote q3">semoga ga sering galau lagi</div>
+      <div class="quote q4">semoga lebih bahagia lagi</div>
+      <div class="quote q5">semoga jadi lebih sabar</div>
+      <div class="quote q6">semoga masih mau ladenin bocah kaya gue</div>
+      <div class="quote q7">doa yang terbaik buat lo, kakak unhas :p</div>
+
+      <!-- Teks besar background -->
+      <div class="big-text">
+        THE BEST WISH<br />FOR YOU KAK<br /><br />
+        NAY NUY
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="scroll-hint">kata che tap yang di bawah</div>
+
+    <!-- Tombol scroll di bawah -->
+    <div class="btn-container">
+      <a href="redirect 2.html" class="btn">tap again</a>
+    </div>
+  </body>
+</html>
