@@ -11,12 +11,12 @@
     <style>
       body {
         margin: 0;
-        background: #fdf0f0; /* warna background */
+        background: #fdf0f0;
         font-family: "Poppins", sans-serif;
         display: flex;
         flex-direction: column;
         align-items: center;
-        min-height: 130vh; /* tinggi cukup untuk scroll dikit */
+        min-height: 130vh;
         padding: 40px 20px;
         opacity: 0;
         transform: translateY(20px);
@@ -34,6 +34,7 @@
         position: relative;
         max-width: 900px;
         margin-top: 20px;
+        min-height: 70vh;
       }
 
       /* Teks besar jadi background */
@@ -42,57 +43,36 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 8vw;
+        font-size: 7vw;
         font-weight: 700;
-        color: #96c29e; /* hijau soft */
+        color: #96c29e;
         line-height: 1.1;
-        opacity: 0.2;
+        opacity: 0.15;
         word-break: break-word;
-        z-index: -1; /* taruh di belakang ucapan */
         text-align: center;
+        pointer-events: none;
       }
 
       /* Teks kecil dengan kotak */
       .quote {
         position: absolute;
-        background: #ffb3ab; /* pink pastel */
+        background: #ffb3ab;
         color: white;
         padding: 10px 15px;
-        border-radius: 8px;
-        font-size: 14px;
-        max-width: 250px;
+        border-radius: 10px;
+        font-size: 15px;
+        max-width: 260px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
       }
 
-      /* Posisi tiap quote */
-      .q1 {
-        top: 7%;
-        left: 20%;
-      }
-      .q2 {
-        top: 20%;
-        right: 15%;
-      }
-      .q3 {
-        top: 35%;
-        left: 10%;
-      }
-      .q4 {
-        top: 44%;
-        right: 10%;
-      }
-      .q5 {
-        top: 55%;
-        left: 25%;
-      }
-      .q6 {
-        bottom: 25%;
-        right: 10%;
-      }
-      .q7 {
-        bottom: 10%;
-        left: 20%;
-      }
+      /* Posisi tiap quote di desktop */
+      .q1 { top: 8%; left: 15%; }
+      .q2 { top: 22%; right: 15%; }
+      .q3 { top: 38%; left: 12%; }
+      .q4 { top: 48%; right: 12%; }
+      .q5 { top: 60%; left: 20%; }
+      .q6 { bottom: 22%; right: 14%; }
+      .q7 { bottom: 8%; left: 18%; }
 
       /* Scroll hint */
       .scroll-hint {
@@ -104,18 +84,13 @@
       }
 
       @keyframes bounce {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(5px);
-        }
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(6px); }
       }
 
       /* Tombol redirect */
       .btn-container {
-        margin-top: 60px;
+        margin-top: 50px;
         text-align: center;
       }
 
@@ -130,7 +105,7 @@
         font-family: "Poppins", sans-serif;
         font-weight: 500;
         transition: all 0.3s ease;
-        text-decoration: none; /* biar gak underline */
+        text-decoration: none;
         display: inline-block;
       }
 
@@ -145,24 +120,26 @@
           min-height: auto;
         }
 
-        .big-text {
-          font-size: 12vw; /* teks gede jadi lebih kecil */
-          text-align: center;
-        }
-
-        .quote {
-          position: static; /* biar ga numpuk */
-          display: block;
-          margin: 12px auto;
-          max-width: 90%;
-          font-size: 13px;
-          text-align: center;
-        }
-
         .container {
           display: flex;
           flex-direction: column;
           align-items: center;
+          min-height: auto;
+        }
+
+        .big-text {
+          position: static;
+          font-size: 12vw;
+          margin: 20px 0;
+          opacity: 0.1;
+        }
+
+        .quote {
+          position: static;
+          margin: 10px auto;
+          max-width: 90%;
+          font-size: 14px;
+          text-align: center;
         }
 
         .btn-container {
@@ -174,9 +151,7 @@
   <body>
     <div class="container">
       <!-- Quotes -->
-      <div class="quote q1">
-        happy 19th birthday orang nyebelin sejagat raya
-      </div>
+      <div class="quote q1">happy 19th birthday orang nyebelin sejagat raya</div>
       <div class="quote q2">semoga ga sering ngambekan lagi</div>
       <div class="quote q3">semoga ga sering galau lagi</div>
       <div class="quote q4">semoga lebih bahagia lagi</div>
@@ -186,8 +161,7 @@
 
       <!-- Teks besar background -->
       <div class="big-text">
-        THE BEST WISH<br />FOR YOU KAK<br /><br />
-        NAY NUY
+        THE BEST WISH<br />FOR YOU KAK<br /><br />NAY NUY
       </div>
     </div>
 
