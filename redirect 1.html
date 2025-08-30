@@ -14,13 +14,15 @@
         background: #fdf0f0;
         font-family: "Poppins", sans-serif;
         display: flex;
+        justify-content: center; /* rata tengah vertikal */
+        align-items: center; /* rata tengah horizontal */
         flex-direction: column;
-        align-items: center;
-        min-height: 130vh;
-        padding: 40px 20px;
+        min-height: 100vh;
+        padding: 20px;
         opacity: 0;
         transform: translateY(20px);
         animation: fadeInUp 0.6s ease forwards;
+        text-align: center;
       }
 
       @keyframes fadeInUp {
@@ -33,11 +35,10 @@
       .container {
         position: relative;
         max-width: 900px;
-        margin-top: 20px;
-        min-height: 70vh;
+        width: 100%;
       }
 
-      /* Teks besar jadi background */
+      /* Teks besar background */
       .big-text {
         position: absolute;
         top: 50%;
@@ -49,34 +50,32 @@
         line-height: 1.1;
         opacity: 0.15;
         word-break: break-word;
+        z-index: -1;
         text-align: center;
         pointer-events: none;
       }
 
-      /* Teks kecil dengan kotak */
+      /* Quotes */
+      .quotes {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        z-index: 2;
+      }
+
       .quote {
-        position: absolute;
         background: #ffb3ab;
         color: white;
-        padding: 10px 15px;
+        padding: 12px 16px;
         border-radius: 10px;
-        font-size: 15px;
-        max-width: 260px;
+        font-size: 14px;
+        font-weight: 500;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
       }
 
-      /* Posisi tiap quote di desktop */
-      .q1 { top: 8%; left: 15%; }
-      .q2 { top: 22%; right: 15%; }
-      .q3 { top: 38%; left: 12%; }
-      .q4 { top: 48%; right: 12%; }
-      .q5 { top: 60%; left: 20%; }
-      .q6 { bottom: 22%; right: 14%; }
-      .q7 { bottom: 8%; left: 18%; }
-
       /* Scroll hint */
       .scroll-hint {
-        margin-top: 20px;
+        margin-top: 25px;
         font-size: 16px;
         color: #96c29e;
         font-weight: 500;
@@ -84,14 +83,18 @@
       }
 
       @keyframes bounce {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(6px); }
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(5px);
+        }
       }
 
-      /* Tombol redirect */
+      /* Tombol */
       .btn-container {
-        margin-top: 50px;
-        text-align: center;
+        margin-top: 25px;
       }
 
       .btn {
@@ -102,7 +105,6 @@
         font-size: 16px;
         color: white;
         cursor: pointer;
-        font-family: "Poppins", sans-serif;
         font-weight: 500;
         transition: all 0.3s ease;
         text-decoration: none;
@@ -113,62 +115,39 @@
         background-color: #ff9a93;
       }
 
-      /* 📱 Responsif untuk HP */
+      /* 📱 Responsif HP */
       @media (max-width: 768px) {
-        body {
-          padding: 20px 10px;
-          min-height: auto;
-        }
-
-        .container {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          min-height: auto;
-        }
-
         .big-text {
-          position: static;
-          font-size: 12vw;
-          margin: 20px 0;
-          opacity: 0.1;
+          font-size: 11vw;
         }
 
         .quote {
-          position: static;
-          margin: 10px auto;
-          max-width: 90%;
-          font-size: 14px;
-          text-align: center;
-        }
-
-        .btn-container {
-          margin-top: 30px;
+          font-size: 13px;
         }
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <!-- Quotes -->
-      <div class="quote q1">happy 19th birthday orang nyebelin sejagat raya</div>
-      <div class="quote q2">semoga ga sering ngambekan lagi</div>
-      <div class="quote q3">semoga ga sering galau lagi</div>
-      <div class="quote q4">semoga lebih bahagia lagi</div>
-      <div class="quote q5">semoga jadi lebih sabar</div>
-      <div class="quote q6">semoga masih mau ladenin bocah kaya gue</div>
-      <div class="quote q7">doa yang terbaik buat lo, kakak unhas :p</div>
-
       <!-- Teks besar background -->
-      <div class="big-text">
-        THE BEST WISH<br />FOR YOU KAK<br /><br />NAY NUY
+      <div class="big-text">THE BEST WISH FOR YOU KAK NAY NUY<br /><br /></div>
+
+      <!-- Quotes -->
+      <div class="quotes">
+        <div class="quote">happy 19th birthday orang nyebelin sejagat raya</div>
+        <div class="quote">semoga ga sering ngambekan lagi</div>
+        <div class="quote">semoga ga sering galau lagi</div>
+        <div class="quote">semoga lebih bahagia lagi</div>
+        <div class="quote">semoga jadi lebih sabar</div>
+        <div class="quote">semoga masih mau ladenin bocah kaya gue</div>
+        <div class="quote">doa yang terbaik buat lo, kakak unhas :p</div>
       </div>
     </div>
 
     <!-- Scroll hint -->
     <div class="scroll-hint">kata che tap yang di bawah</div>
 
-    <!-- Tombol scroll di bawah -->
+    <!-- Tombol -->
     <div class="btn-container">
       <a href="redirect 2.html" class="btn">tap again</a>
     </div>
