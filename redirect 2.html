@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sweet Birthday</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: #fdf0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .card {
+        background: #96c29e; /* hijau soft */
+        border-radius: 10px;
+        padding: 40px;
+        max-width: 900px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        gap: 20px;
+        position: relative;
+
+        /* 🔑 animasi masuk */
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.6s ease forwards;
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .text {
+        color: white;
+      }
+
+      .text h1 {
+        font-size: 2.2rem;
+        margin: 0 0 25px 0;
+        color: #ffffff;
+        line-height: 1.2;
+      }
+
+      .quote {
+        background: #ffb3ab;
+        color: white;
+        padding: 15px;
+        border-radius: 8px;
+        font-size: 14px;
+        line-height: 1.6;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        margin-top: 10px;
+      }
+
+      .quote small {
+        display: block;
+        margin-top: 10px;
+        font-size: 12px;
+        font-style: italic;
+      }
+
+      .image {
+        text-align: center;
+      }
+
+      .image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Tombol redirect */
+      .btn-redirect {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 22px;
+        background: #ffb3ab;
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 10px;
+        transition: 0.3s;
+      }
+
+      .btn-redirect:hover {
+        background: #ff8a8a;
+      }
+
+      .btn-container {
+        grid-column: span 2;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      /* 📱 Responsif untuk HP */
+      @media (max-width: 768px) {
+        .card {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .text h1 {
+          font-size: 1.8rem;
+        }
+
+        .quote {
+          font-size: 13px;
+          padding: 14px;
+        }
+
+        .btn-container {
+          grid-column: span 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="text">
+        <h1>Sweet Wish</h1>
+        <div class="quote">
+          halo orang nyebelin, selamat ulang tahun ya. umur yang baru harus di
+          isi pengalaman yang baru juga, cobain hal hal baru selagi kamu ada
+          waktu. kak, sometimes in life kita pasti bakal ngerasain tantangan,
+          hambatan, dan masalah. mungkin sekarang kamu lagi susah di per
+          ekonimian, kamu lagi susah mengontrol emosi kamu karena isi kepala
+          kamu yang selalu berisik, tapi kamu harus yakin suatu saat nanti kamu
+          ga akan ngerasain hal itu lagi, percaya jalan Allah dan alur yang udah
+          di buat itu rencana yang paling baik. doaku semoga di umur kamu yang
+          baru ini kamu lebih sering merasakan hal hal baik, di dekatkan dengan
+          lingkungan yang baik, di lancarkan rezekinya, selalu sehat, selalu
+          bahagia, dan selalu bersyukur ya, kamu kuat udah bisa sampe sejauh
+          ini, proud of you. once again happy birthday kak naynuy!
+          <small>- che cantik 2025</small>
+        </div>
+      </div>
+      <div class="image">
+        <img
+          src="https://i.pinimg.com/736x/b1/3b/a6/b13ba67487fb74fee1a2ea4edac3e6b8.jpg"
+          alt="hbd"
+        />
+      </div>
+
+      <!-- Tombol redirect ke page berikutnya -->
+      <div class="btn-container">
+        <a href="redirect 3.html" class="btn-redirect">Next ➝</a>
+      </div>
+    </div>
+  </body>
+</html>
