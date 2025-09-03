@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rain of Photos</title>
+
+    <!-- Import Google Font Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background: url("https://i.pinimg.com/736x/61/d0/1a/61d01a53a1086c43ea22700021943802.jpg")
+          no-repeat center center/cover; /* ganti link sesuai gambar kamu */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        overflow: hidden;
+        font-family: "Poppins", sans-serif;
+
+        /* animasi masuk */
+        opacity: 0;
+        animation: fadeIn 0.6s ease-in forwards;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* tombol umum */
+      button {
+        padding: 12px 24px;
+        font-size: 16px;
+        font-family: "Poppins", sans-serif;
+        border: none;
+        border-radius: 8px;
+        background: rgba(150, 194, 158, 0.9);
+        color: white;
+        cursor: pointer;
+        z-index: 10;
+        transition: transform 0.2s ease, background 0.3s ease;
+      }
+
+      button:hover {
+        transform: scale(1.05);
+        background: rgba(126, 166, 134, 0.9);
+      }
+
+      /* tombol back */
+      .back-btn {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 14px;
+        padding: 8px 16px;
+        background: rgba(77, 44, 61, 0.8);
+      }
+
+      .falling {
+        position: fixed;
+        top: -100px;
+        width: 60px;
+        height: 60px;
+        pointer-events: none;
+        animation: fall linear forwards;
+      }
+
+      @keyframes fall {
+        to {
+          transform: translateY(110vh) rotate(360deg);
+          opacity: 0.8;
+        }
+      }
+
+      /* Responsif untuk HP */
+      @media (max-width: 600px) {
+        body {
+          flex-direction: column;
+          gap: 15px;
+          padding: 20px;
+        }
+
+        button {
+          width: 100%;
+          max-width: 300px;
+          font-size: 18px;
+          padding: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Tombol back -->
+    <button class="back-btn" onclick="window.location.href='index.html'">
+      ← back
+    </button>
+
+    <!-- Tombol pertama -->
+    <button
+      onclick="rain('https://i.pinimg.com/736x/cb/18/32/cb1832ed0e6a0da605b532c8a2cae14f.jpg')"
+    >
+      click your gift (1)
+    </button>
+
+    <!-- Tombol kedua -->
+    <button
+      onclick="rain('https://i.pinimg.com/736x/ab/9e/c8/ab9ec89ac751925d286a9fa4aca1dcdd.jpg')"
+    >
+      click your gift (2)
+    </button>
+
+    <script>
+      function rain(imgUrl) {
+        for (let i = 0; i < 10; i++) {
+          const img = document.createElement("img");
+          img.src = imgUrl;
+          img.className = "falling";
+          img.style.left = Math.random() * window.innerWidth + "px";
+          img.style.animationDuration = Math.random() * 3 + 2 + "s";
+          document.body.appendChild(img);
+
+          img.addEventListener("animationend", () => {
+            img.remove();
+          });
+        }
+      }
+    </script>
+  </body>
+</html>
