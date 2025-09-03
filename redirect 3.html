@@ -103,6 +103,33 @@
         animation: fadeInUp 0.6s ease forwards;
         animation-delay: 0.2s; /* biar muncul setelah frame */
       }
+
+      /* tombol redirect */
+      .redirect-btn {
+        margin-top: 10px;
+        padding: 12px 24px;
+        background: #96c29e;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        font-family: "Poppins", sans-serif;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+        /* animasi masuk */
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.6s ease forwards;
+        animation-delay: 0.4s; /* muncul terakhir */
+        transition: transform 0.2s ease, background 0.3s ease;
+      }
+
+      .redirect-btn:hover {
+        transform: scale(1.05);
+        background: #7ea686;
+      }
     </style>
   </head>
   <body>
@@ -131,6 +158,12 @@
       mungkin harusnya gausah di tanya (yauda lah ya namanya bocah kepo) dan
       satu lagi, stop ngambekan ya kampret! ily kakak kakak an ku wle (as a
       friend ya jgn lu mikir kemana mana)
+    </div>
+
+   <!-- Tombol redirect ke page berikutnya -->
+      <div class="btn-container">
+        <a href="redirect 4.html" class="btn-redirect"> take a peek your gift here</a>
+      </div>
     </div>
   </body>
 </html>
