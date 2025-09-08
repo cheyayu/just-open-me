@@ -15,7 +15,7 @@
       body {
         margin: 0;
         height: 100vh;
-        background: url("https://i.pinimg.com/736x/61/d0/1a/61d01a53a1086c43ea22700021943802.jpg")
+        background: url("https://i.pinimg.com/736x/77/72/d8/7772d8a93c293bdbe4296ff161819730.jpg")
           no-repeat center center/cover; /* ganti link sesuai gambar kamu */
         display: flex;
         justify-content: center;
@@ -57,11 +57,15 @@
       /* tombol back */
       .back-btn {
         position: absolute;
-        top: 20px;
-        left: 20px;
-        font-size: 14px;
-        padding: 8px 16px;
-        background: rgba(77, 44, 61, 0.8);
+        top: 15px;
+        left: 15px;
+        font-size: 12px;
+        padding: 4px 8px; /* lebih kecil */
+        background: rgba(77, 44, 61, 0.85);
+        border-radius: 6px;
+        line-height: 1; /* biar teks pas */
+        width: auto; /* jangan melebar */
+        min-width: unset; /* override kalau ada max/min width */
       }
 
       .falling {
@@ -104,18 +108,10 @@
     </button>
 
     <!-- Tombol pertama -->
-    <button
-      onclick="rain('https://i.pinimg.com/736x/cb/18/32/cb1832ed0e6a0da605b532c8a2cae14f.jpg')"
-    >
-      click your gift (1)
-    </button>
+    <button onclick="rain('index.css/kebab.jpg')">click your gift (1)</button>
 
     <!-- Tombol kedua -->
-    <button
-      onclick="rain('https://i.pinimg.com/1200x/94/0f/0f/940f0f9c852588677174911bf1aae248.jpg')"
-    >
-      click your gift (2)
-    </button>
+    <button onclick="rain('index.css/porsche.jpg')">click your gift (2)</button>
 
     <script>
       function rain(imgUrl) {
@@ -135,5 +131,3 @@
     </script>
   </body>
 </html>
-
-
