@@ -1,1 +1,7 @@
+<!-- Tombol pertama -->
+    <button onclick="rain('index.css/kebab.jpg')">click your gift (1)</button>
 
+    <!-- Tombol kedua -->
+    <button onclick="rain('index.css/porsche.jpg')">click your gift (2)</button>
+
+    <script>
